@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TranslationPanel));
             textBoxSentence = new TextBox();
             webBrowserResult = new WebBrowser();
             buttonInterpret = new Button();
@@ -35,43 +36,29 @@
             // 
             // textBoxSentence
             // 
-            textBoxSentence.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBoxSentence.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxSentence.Location = new Point(3, 3);
-            textBoxSentence.Multiline = true;
+            resources.ApplyResources(textBoxSentence, "textBoxSentence");
             textBoxSentence.Name = "textBoxSentence";
-            textBoxSentence.Size = new Size(545, 76);
-            textBoxSentence.TabIndex = 0;
             // 
             // webBrowserResult
             // 
-            webBrowserResult.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            webBrowserResult.Location = new Point(3, 114);
+            resources.ApplyResources(webBrowserResult, "webBrowserResult");
             webBrowserResult.Name = "webBrowserResult";
-            webBrowserResult.Size = new Size(545, 153);
-            webBrowserResult.TabIndex = 2;
-            webBrowserResult.DocumentText = getHtmlTemplate();
             // 
             // buttonInterpret
             // 
-            buttonInterpret.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            buttonInterpret.Location = new Point(3, 85);
+            resources.ApplyResources(buttonInterpret, "buttonInterpret");
             buttonInterpret.Name = "buttonInterpret";
-            buttonInterpret.Size = new Size(545, 23);
-            buttonInterpret.TabIndex = 3;
-            buttonInterpret.Text = "分析";
             buttonInterpret.UseVisualStyleBackColor = true;
             buttonInterpret.Click += buttonInterpret_Click;
             // 
             // TranslationPanel
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(buttonInterpret);
             Controls.Add(webBrowserResult);
             Controls.Add(textBoxSentence);
             Name = "TranslationPanel";
-            Size = new Size(551, 270);
             ResumeLayout(false);
             PerformLayout();
         }

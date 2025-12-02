@@ -117,106 +117,137 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBoxSentence.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>TranslationPanel</value>
-  </data>
-  <data name="&gt;&gt;buttonInterpret.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
+  <data name="checkBoxUseProxy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 19</value>
   </data>
-  <data name="textBoxSentence.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt</value>
+  <data name="checkBoxUseProxy.Text" xml:space="preserve">
+    <value>HTTP proxy</value>
   </data>
-  <data name="buttonInterpret.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="comboBoxExtraPrompts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 69</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="webBrowserResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="checkBoxUseExtraPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 19</value>
   </data>
-  <data name="webBrowserResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 101</value>
+  <data name="checkBoxUseExtraPrompt.Text" xml:space="preserve">
+    <value>Use additional Prompt</value>
   </data>
-  <data name="buttonInterpret.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
+  <data name="buttonUpdateExtraPrompt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 68</value>
   </data>
-  <data name="textBoxSentence.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 68</value>
+  <data name="buttonUpdateExtraPrompt.Text" xml:space="preserve">
+    <value>Reread</value>
   </data>
-  <data name="textBoxSentence.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="checkBoxDark.Location" type="System.Drawing.Point, System.Drawing">
+    <value>153, 42</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBoxDark.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 19</value>
   </data>
-  <data name="buttonInterpret.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="checkBoxDark.Text" xml:space="preserve">
+    <value>Dark mode</value>
   </data>
-  <data name="&gt;&gt;textBoxSentence.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="checkBoxTopmost.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 19</value>
   </data>
-  <data name="&gt;&gt;buttonInterpret.Name" xml:space="preserve">
-    <value>buttonInterpret</value>
+  <data name="checkBoxTopmost.Text" xml:space="preserve">
+    <value>Keep window in front</value>
   </data>
-  <data name="&gt;&gt;webBrowserResult.Name" xml:space="preserve">
-    <value>webBrowserResult</value>
+  <data name="btnSelectWindow.Text" xml:space="preserve">
+    <value>Select window</value>
   </data>
-  <data name="&gt;&gt;webBrowserResult.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="checkBoxWindowAttach.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 19</value>
   </data>
-  <data name="&gt;&gt;buttonInterpret.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="checkBoxWindowAttach.Text" xml:space="preserve">
+    <value>Align with window</value>
   </data>
-  <data name="webBrowserResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 135</value>
+  <data name="tabPageSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>719, 127</value>
   </data>
-  <data name="buttonInterpret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 20</value>
+  <data name="tabPageSettings.Text" xml:space="preserve">
+    <value>System Settings</value>
   </data>
-  <data name="textBoxSentence.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="webView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>713, 121</value>
   </data>
-  <data name="buttonInterpret.Text" xml:space="preserve">
-    <value>分析</value>
+  <data name="tabPageText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>719, 127</value>
   </data>
-  <data name="&gt;&gt;textBoxSentence.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="tabPageText.Text" xml:space="preserve">
+    <value>Statement Analysis</value>
   </data>
-  <data name="&gt;&gt;buttonInterpret.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>727, 155</value>
   </data>
-  <data name="&gt;&gt;webBrowserResult.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="buttonDebug.Location" type="System.Drawing.Point, System.Drawing">
+    <value>277, 4</value>
   </data>
-  <data name="&gt;&gt;textBoxSentence.Name" xml:space="preserve">
-    <value>textBoxSentence</value>
+  <data name="comboBoxTranslator.Items" xml:space="preserve">
+    <value>Google Translate</value>
   </data>
-  <data name="&gt;&gt;webBrowserResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboBoxTranslator.Items2" xml:space="preserve">
+    <value>Google Grasshopper</value>
   </data>
-  <data name="textBoxSentence.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="comboBoxTranslator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 4</value>
   </data>
-  <data name="webBrowserResult.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="checkBoxTranslateKatakana.Location" type="System.Drawing.Point, System.Drawing">
+    <value>634, 7</value>
   </data>
-  <data name="&gt;&gt;textBoxSentence.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBoxTranslateKatakana.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 19</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>551, 238</value>
+  <data name="checkBoxTranslateKatakana.Text" xml:space="preserve">
+    <value>No fakes left</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>ru</value>
-  </metadata>
+  <data name="checkBoxAutoTranslate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 7</value>
+  </data>
+  <data name="checkBoxAutoTranslate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="checkBoxAutoTranslate.Text" xml:space="preserve">
+    <value>Auto-translation</value>
+  </data>
+  <data name="buttonTranslate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 4</value>
+  </data>
+  <data name="buttonTranslate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 24</value>
+  </data>
+  <data name="buttonTranslate.Text" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="buttonShowDictForm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 4</value>
+  </data>
+  <data name="buttonShowDictForm.Text" xml:space="preserve">
+    <value>Dictionary</value>
+  </data>
+  <data name="btnInputText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 4</value>
+  </data>
+  <data name="btnInputText.Text" xml:space="preserve">
+    <value>Manual input</value>
+  </data>
+  <data name="checkBoxClipboardMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 19</value>
+  </data>
+  <data name="checkBoxClipboardMode.Text" xml:space="preserve">
+    <value>Read the clipboard</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 151</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>727, 32</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>727, 183</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KS Japanese learning tools</value>
+  </data>
 </root>

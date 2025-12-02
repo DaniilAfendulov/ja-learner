@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             timerWindowAttach = new System.Windows.Forms.Timer(components);
             timerSelectWindow = new System.Windows.Forms.Timer(components);
             tabPageSettings = new TabPage();
@@ -72,6 +73,7 @@
             // 
             // tabPageSettings
             // 
+            resources.ApplyResources(tabPageSettings, "tabPageSettings");
             tabPageSettings.Controls.Add(checkBoxUseProxy);
             tabPageSettings.Controls.Add(comboBoxExtraPrompts);
             tabPageSettings.Controls.Add(checkBoxUseExtraPrompt);
@@ -81,146 +83,98 @@
             tabPageSettings.Controls.Add(textBoxHwnd);
             tabPageSettings.Controls.Add(btnSelectWindow);
             tabPageSettings.Controls.Add(checkBoxWindowAttach);
-            tabPageSettings.Location = new Point(4, 26);
             tabPageSettings.Name = "tabPageSettings";
-            tabPageSettings.Padding = new Padding(3);
-            tabPageSettings.Size = new Size(639, 144);
-            tabPageSettings.TabIndex = 0;
-            tabPageSettings.Text = "系统设置";
             tabPageSettings.UseVisualStyleBackColor = true;
             // 
             // checkBoxUseProxy
             // 
-            checkBoxUseProxy.AutoSize = true;
-            checkBoxUseProxy.Enabled = false;
-            checkBoxUseProxy.Location = new Point(8, 110);
+            resources.ApplyResources(checkBoxUseProxy, "checkBoxUseProxy");
             checkBoxUseProxy.Name = "checkBoxUseProxy";
-            checkBoxUseProxy.Size = new Size(81, 21);
-            checkBoxUseProxy.TabIndex = 9;
-            checkBoxUseProxy.Text = "HTTP代理";
             checkBoxUseProxy.UseVisualStyleBackColor = true;
             checkBoxUseProxy.CheckedChanged += checkBoxUseProxy_CheckedChanged;
             // 
             // comboBoxExtraPrompts
             // 
+            resources.ApplyResources(comboBoxExtraPrompts, "comboBoxExtraPrompts");
             comboBoxExtraPrompts.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxExtraPrompts.FormattingEnabled = true;
-            comboBoxExtraPrompts.Location = new Point(132, 79);
             comboBoxExtraPrompts.Name = "comboBoxExtraPrompts";
-            comboBoxExtraPrompts.Size = new Size(116, 25);
             comboBoxExtraPrompts.Sorted = true;
-            comboBoxExtraPrompts.TabIndex = 8;
             comboBoxExtraPrompts.SelectedIndexChanged += comboBoxExtraPrompts_SelectedIndexChanged;
             comboBoxExtraPrompts.Click += comboBoxExtraPrompts_Click;
             // 
             // checkBoxUseExtraPrompt
             // 
-            checkBoxUseExtraPrompt.AutoSize = true;
-            checkBoxUseExtraPrompt.Enabled = false;
-            checkBoxUseExtraPrompt.Location = new Point(8, 81);
+            resources.ApplyResources(checkBoxUseExtraPrompt, "checkBoxUseExtraPrompt");
             checkBoxUseExtraPrompt.Name = "checkBoxUseExtraPrompt";
-            checkBoxUseExtraPrompt.Size = new Size(118, 21);
-            checkBoxUseExtraPrompt.TabIndex = 7;
-            checkBoxUseExtraPrompt.Text = "使用额外Prompt";
             checkBoxUseExtraPrompt.UseVisualStyleBackColor = true;
             checkBoxUseExtraPrompt.CheckedChanged += checkBoxUseExtraPrompt_CheckedChanged;
             // 
             // buttonUpdateExtraPrompt
             // 
-            buttonUpdateExtraPrompt.Location = new Point(254, 77);
+            resources.ApplyResources(buttonUpdateExtraPrompt, "buttonUpdateExtraPrompt");
             buttonUpdateExtraPrompt.Name = "buttonUpdateExtraPrompt";
-            buttonUpdateExtraPrompt.Size = new Size(75, 27);
-            buttonUpdateExtraPrompt.TabIndex = 6;
-            buttonUpdateExtraPrompt.Text = "重新读取";
             buttonUpdateExtraPrompt.UseVisualStyleBackColor = true;
             buttonUpdateExtraPrompt.Click += buttonUpdateExtraPrompt_Click;
             // 
             // checkBoxDark
             // 
-            checkBoxDark.AutoSize = true;
-            checkBoxDark.Location = new Point(113, 50);
+            resources.ApplyResources(checkBoxDark, "checkBoxDark");
             checkBoxDark.Name = "checkBoxDark";
-            checkBoxDark.Size = new Size(75, 21);
-            checkBoxDark.TabIndex = 6;
-            checkBoxDark.Text = "深色模式";
             checkBoxDark.UseVisualStyleBackColor = true;
             checkBoxDark.Click += checkBoxDark_CheckedChanged;
             // 
             // checkBoxTopmost
             // 
-            checkBoxTopmost.AutoSize = true;
-            checkBoxTopmost.Location = new Point(8, 50);
+            resources.ApplyResources(checkBoxTopmost, "checkBoxTopmost");
             checkBoxTopmost.Name = "checkBoxTopmost";
-            checkBoxTopmost.Size = new Size(99, 21);
-            checkBoxTopmost.TabIndex = 5;
-            checkBoxTopmost.Text = "保持窗口前置";
             checkBoxTopmost.UseVisualStyleBackColor = true;
             checkBoxTopmost.CheckedChanged += checkBoxTopmost_CheckedChanged;
             // 
             // textBoxHwnd
             // 
-            textBoxHwnd.Location = new Point(89, 15);
+            resources.ApplyResources(textBoxHwnd, "textBoxHwnd");
             textBoxHwnd.Name = "textBoxHwnd";
             textBoxHwnd.ReadOnly = true;
-            textBoxHwnd.Size = new Size(100, 23);
-            textBoxHwnd.TabIndex = 1;
             textBoxHwnd.TextChanged += textBoxHwnd_TextChanged;
             // 
             // btnSelectWindow
             // 
-            btnSelectWindow.Location = new Point(6, 15);
+            resources.ApplyResources(btnSelectWindow, "btnSelectWindow");
             btnSelectWindow.Name = "btnSelectWindow";
-            btnSelectWindow.Size = new Size(75, 23);
-            btnSelectWindow.TabIndex = 4;
-            btnSelectWindow.Text = "选择窗口";
             btnSelectWindow.UseVisualStyleBackColor = true;
             btnSelectWindow.Click += btnSelectWindow_Click;
             // 
             // checkBoxWindowAttach
             // 
-            checkBoxWindowAttach.AutoSize = true;
-            checkBoxWindowAttach.Enabled = false;
-            checkBoxWindowAttach.Location = new Point(195, 17);
+            resources.ApplyResources(checkBoxWindowAttach, "checkBoxWindowAttach");
             checkBoxWindowAttach.Name = "checkBoxWindowAttach";
-            checkBoxWindowAttach.Size = new Size(87, 21);
-            checkBoxWindowAttach.TabIndex = 3;
-            checkBoxWindowAttach.Text = "与窗口对齐";
             checkBoxWindowAttach.UseVisualStyleBackColor = true;
             checkBoxWindowAttach.CheckedChanged += checkBoxWindowAttach_CheckedChanged;
             // 
             // tabPageText
             // 
+            resources.ApplyResources(tabPageText, "tabPageText");
             tabPageText.Controls.Add(webView);
-            tabPageText.Location = new Point(4, 26);
             tabPageText.Name = "tabPageText";
-            tabPageText.Padding = new Padding(3);
-            tabPageText.Size = new Size(639, 144);
-            tabPageText.TabIndex = 1;
-            tabPageText.Text = "语句分析";
             tabPageText.UseVisualStyleBackColor = true;
             // 
             // webView
             // 
+            resources.ApplyResources(webView, "webView");
             webView.AllowExternalDrop = true;
             webView.CreationProperties = null;
             webView.DefaultBackgroundColor = Color.White;
-            webView.Dock = DockStyle.Fill;
-            webView.Location = new Point(3, 3);
             webView.Name = "webView";
-            webView.Size = new Size(633, 138);
-            webView.TabIndex = 1;
             webView.ZoomFactor = 1D;
             // 
             // tabControl
             // 
-            tabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            resources.ApplyResources(tabControl, "tabControl");
             tabControl.Controls.Add(tabPageText);
             tabControl.Controls.Add(tabPageSettings);
-            tabControl.Location = new Point(0, 0);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(647, 174);
-            tabControl.TabIndex = 2;
             // 
             // timerGetClipboard
             // 
@@ -229,6 +183,7 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(panel1, "panel1");
             panel1.Controls.Add(buttonDebug);
             panel1.Controls.Add(comboBoxTranslator);
             panel1.Controls.Add(checkBoxTranslateKatakana);
@@ -237,109 +192,71 @@
             panel1.Controls.Add(buttonShowDictForm);
             panel1.Controls.Add(btnInputText);
             panel1.Controls.Add(checkBoxClipboardMode);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 170);
             panel1.Name = "panel1";
-            panel1.Size = new Size(647, 36);
-            panel1.TabIndex = 3;
             // 
             // buttonDebug
             // 
-            buttonDebug.Location = new Point(248, 5);
+            resources.ApplyResources(buttonDebug, "buttonDebug");
             buttonDebug.Name = "buttonDebug";
-            buttonDebug.Size = new Size(72, 27);
-            buttonDebug.TabIndex = 13;
-            buttonDebug.Text = "DEBUG";
             buttonDebug.UseVisualStyleBackColor = true;
-            buttonDebug.Visible = false;
             buttonDebug.Click += buttonDebug_Click;
             // 
             // comboBoxTranslator
             // 
-            comboBoxTranslator.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            resources.ApplyResources(comboBoxTranslator, "comboBoxTranslator");
             comboBoxTranslator.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxTranslator.FormattingEnabled = true;
-            comboBoxTranslator.Items.AddRange(new object[] { "谷歌翻译", "ChatGPT", "谷歌生草机" });
-            comboBoxTranslator.Location = new Point(398, 6);
+            comboBoxTranslator.Items.AddRange(new object[] { resources.GetString("comboBoxTranslator.Items"), resources.GetString("comboBoxTranslator.Items1"), resources.GetString("comboBoxTranslator.Items2") });
             comboBoxTranslator.Name = "comboBoxTranslator";
-            comboBoxTranslator.Size = new Size(86, 25);
-            comboBoxTranslator.TabIndex = 12;
             // 
             // checkBoxTranslateKatakana
             // 
-            checkBoxTranslateKatakana.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            checkBoxTranslateKatakana.AutoSize = true;
-            checkBoxTranslateKatakana.Location = new Point(571, 8);
+            resources.ApplyResources(checkBoxTranslateKatakana, "checkBoxTranslateKatakana");
             checkBoxTranslateKatakana.Name = "checkBoxTranslateKatakana";
-            checkBoxTranslateKatakana.Size = new Size(75, 21);
-            checkBoxTranslateKatakana.TabIndex = 10;
-            checkBoxTranslateKatakana.Text = "片假不留";
             checkBoxTranslateKatakana.UseVisualStyleBackColor = true;
             checkBoxTranslateKatakana.CheckedChanged += checkBoxTranslateKatakana_CheckedChanged;
             // 
             // checkBoxAutoTranslate
             // 
-            checkBoxAutoTranslate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            checkBoxAutoTranslate.AutoSize = true;
-            checkBoxAutoTranslate.Location = new Point(495, 8);
+            resources.ApplyResources(checkBoxAutoTranslate, "checkBoxAutoTranslate");
             checkBoxAutoTranslate.Name = "checkBoxAutoTranslate";
-            checkBoxAutoTranslate.Size = new Size(75, 21);
-            checkBoxAutoTranslate.TabIndex = 9;
-            checkBoxAutoTranslate.Text = "自动翻译";
             checkBoxAutoTranslate.UseVisualStyleBackColor = true;
             // 
             // buttonTranslate
             // 
-            buttonTranslate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonTranslate.Location = new Point(347, 5);
+            resources.ApplyResources(buttonTranslate, "buttonTranslate");
             buttonTranslate.Name = "buttonTranslate";
-            buttonTranslate.Size = new Size(45, 27);
-            buttonTranslate.TabIndex = 8;
-            buttonTranslate.Text = "翻译";
             buttonTranslate.UseVisualStyleBackColor = true;
             buttonTranslate.Click += buttonTranslate_Click;
             // 
             // buttonShowDictForm
             // 
-            buttonShowDictForm.Location = new Point(170, 5);
+            resources.ApplyResources(buttonShowDictForm, "buttonShowDictForm");
             buttonShowDictForm.Name = "buttonShowDictForm";
-            buttonShowDictForm.Size = new Size(72, 27);
-            buttonShowDictForm.TabIndex = 7;
-            buttonShowDictForm.Text = "词典窗口";
             buttonShowDictForm.UseVisualStyleBackColor = true;
             buttonShowDictForm.Click += buttonShowDictForm_Click;
             // 
             // btnInputText
             // 
-            btnInputText.Location = new Point(96, 5);
+            resources.ApplyResources(btnInputText, "btnInputText");
             btnInputText.Name = "btnInputText";
-            btnInputText.Size = new Size(68, 27);
-            btnInputText.TabIndex = 1;
-            btnInputText.Text = "手动输入";
             btnInputText.UseVisualStyleBackColor = true;
             btnInputText.Click += btnInputText_Click;
             // 
             // checkBoxClipboardMode
             // 
-            checkBoxClipboardMode.AutoSize = true;
-            checkBoxClipboardMode.Location = new Point(5, 8);
+            resources.ApplyResources(checkBoxClipboardMode, "checkBoxClipboardMode");
             checkBoxClipboardMode.Name = "checkBoxClipboardMode";
-            checkBoxClipboardMode.Size = new Size(87, 21);
-            checkBoxClipboardMode.TabIndex = 0;
-            checkBoxClipboardMode.Text = "读取剪贴板";
             checkBoxClipboardMode.UseVisualStyleBackColor = true;
             checkBoxClipboardMode.CheckedChanged += checkBoxClipboardMode_CheckedChanged;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(647, 206);
             Controls.Add(panel1);
             Controls.Add(tabControl);
-            MinimumSize = new Size(580, 240);
             Name = "MainForm";
-            Text = "KS的日语学习工具";
             Load += MainForm_Load;
             SizeChanged += MainForm_SizeChanged;
             tabPageSettings.ResumeLayout(false);

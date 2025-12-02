@@ -73,8 +73,6 @@ namespace ja_learner
         {
             IPGlobalProperties properties = IPGlobalProperties.GetIPGlobalProperties();
             IPEndPoint[] activeTcpListeners = properties.GetActiveTcpListeners();
-            IPEndPoint[] activeUdpListeners = properties.GetActiveUdpListeners();
-
             foreach (IPEndPoint endPoint in activeTcpListeners)
             {
                 if (endPoint.Port == port)
@@ -82,7 +80,7 @@ namespace ja_learner
                     return true;
                 }
             }
-
+            IPEndPoint[] activeUdpListeners = properties.GetActiveUdpListeners();
             foreach (IPEndPoint endPoint in activeUdpListeners)
             {
                 if (endPoint.Port == port)

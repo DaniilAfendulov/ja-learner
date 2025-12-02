@@ -12,8 +12,8 @@ namespace ja_learner
         }
 
         public DictForm(Form _mainForm)
+            : this()
         {
-            InitializeComponent();
             mainForm = _mainForm;
         }
         private async Task InitializeWebView()

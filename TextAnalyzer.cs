@@ -1,4 +1,5 @@
 ﻿using MeCab;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace ja_learner
@@ -7,12 +8,20 @@ namespace ja_learner
     struct TextAnalyzerResult
     {
         public string Surface;
+        /// <summary>
+        /// Part of speech
+        /// </summary>
         public string Pos;// 词性
+        /// <summary>
+        /// Basic type
+        /// </summary>
         public string Basic;// 基本型
+        /// <summary>
+        /// pronunciation
+        /// </summary>
         public string Reading;// 读音
         public readonly string ToJson()
         {
-
             return $"{{surface:'{Surface}',pos:'{Pos}',basic:'{Basic}',reading:'{Reading}'}}";
         }
     }
@@ -21,8 +30,8 @@ namespace ja_learner
     // 包装 MecabDotNet
     internal class TextAnalyzer
     {
-        private MeCabParam parameter;
-        private MeCabTagger tagger;
+        private readonly MeCabParam parameter;
+        private readonly MeCabTagger tagger;
         public TextAnalyzer() {
             // 初始化 mecab dotnet
             parameter = new MeCabParam();
@@ -38,17 +47,19 @@ namespace ja_learner
             tagger = MeCabTagger.Create(parameter);
         }
 
+        private readonly Regex FeatureRegex = new("\"[^\"]*\"", RegexOptions.Compiled);
+        private readonly Regex SurfaceRegex = new(@"^[a-zA-Z0-9]+$", RegexOptions.Compiled);
         public List<TextAnalyzerResult> Analyze(string text)
         {
-            List<TextAnalyzerResult> results = new List<TextAnalyzerResult>();
+            var results = new List<TextAnalyzerResult>();
             results.Clear();
             foreach (var node in tagger.ParseToNodes(text))
             {
                 if (node.CharType > 0)
                 {
-                    TextAnalyzerResult result = new TextAnalyzerResult();
+                    var result = new TextAnalyzerResult();
                     // unidic里有些词的解析结果会有双引号，双引号里面有逗号，导致Split错位，所以先把双引号中间清空再Split
-                    var features = Regex.Replace(node.Feature, "\"[^\"]*\"", "").Split(','); 
+                    var features = FeatureRegex.Replace(node.Feature, "").Split(','); 
                     
                     //MessageBox.Show(node.Feature);
                     // 这个mecab库好像没办法用dicrc自定义输出格式，dicrc只对个别属性生效
@@ -63,7 +74,7 @@ namespace ja_learner
                         {
                             result.Reading = "";
                         }
-                        if(Regex.IsMatch(result.Surface, @"^[a-zA-Z0-9]+$"))
+                        if(SurfaceRegex.IsMatch(result.Surface))
                         {
                             result.Reading = "";
                         }
@@ -83,13 +94,13 @@ namespace ja_learner
 
         public string AnalyzeResultToJson(List<TextAnalyzerResult> results)
         {
-            string result = "[";
+            var sb = new StringBuilder("[", results.Count * 10);
             foreach (TextAnalyzerResult r in results)
             {
-                result += $"{r.ToJson()},";
+                sb.Append(r.ToJson()).Append(',');
             }
-            result += "]";
-            return result;
+            sb.Append(']');
+            return sb.ToString();
         }
     }
 }
